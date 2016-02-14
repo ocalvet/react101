@@ -5,10 +5,10 @@ var Dashboard = React.createClass({
     }
   },
   render: function() {
-    return React.createElement(
-      'div', 
-      null,
-      React.createElement(Toolbar, { greeting: this.state.greeting })
+    return (
+      <div className="container">
+        <Toolbar greeting={ this.state.greeting }/>
+      </div>
     );
   }
-})
+});
