@@ -4,7 +4,6 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "webpack && webpack-dev-server",
     "build": "webpack",
     "test": "mocha test"
   },

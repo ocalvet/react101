@@ -3,32 +3,30 @@ var webpack = require('webpack');
 
 module.exports = {
   devtool: 'eval-source-map',
-  entry: "./app/app.jsx",
-    output: {
-        path: __dirname + "/dist",
-        filename: "bundle.js"
-    },
-    module: {
-        loaders: [
-            {
-              test: /\.jsx?$/,
-              include: path.join(__dirname, 'app'),
-              loader: 'babel-loader',
-              query:
-              {
-                presets:['es2015', 'stage-0', 'react']
-              }
-            },
-            {
-              test: /\.scss$/,
-              include: path.join(__dirname, 'app', 'styles'),
-              loader: 'style!css!sass'
-            }
-        ]
-    },
-    devServer: {
-      port: 8090,
-      color: true,
-      progress: true
-    }
-}
+  entry: {
+    app: [
+      // 'webpack-dev-server/client?http://localhost:' + port,
+      // 'webpack/hot/only-dev-server',
+      './app/app.jsx'
+    ]
+  },
+  output: {
+    filename: 'bundle.js',
+    path: __dirname + '/dist',
+    publicPath: '/public/'
+  },
+  module: {
+    loaders: [
+      {
+        test: /\.jsx?$/,
+        include: path.join(__dirname, 'app'),
+        loader: 'babel'
+      },
+      {
+        test: /\.scss$/,
+        include: path.join(__dirname, 'app', 'styles'),
+        loader: 'style!css!sass'
+      }
+    ]
+  }
+};

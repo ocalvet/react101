@@ -10,5 +10,7 @@ This is a sample React application that uses webpack to bundle react components 
 ## Installation
 ``` 
 $ npm install
-$ npm run start
+$ npm start
 ```
+
+Navigate to [http://localhost:8090/webpack-dev-server/](http://localhost:8090/webpack-dev-server/) to run the app.
