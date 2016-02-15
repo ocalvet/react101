@@ -1,4 +1,8 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Dashboard from './components/Dashboard.react.jsx';
+
 ReactDOM.render(
-  React.createElement(Dashboard, null),
+  <Dashboard />,
   document.getElementById('react-app')
 );
