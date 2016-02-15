@@ -2,6 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
+  devtool: 'eval-source-map',
   entry: "./app/app.jsx",
     output: {
         path: __dirname + "/dist",
@@ -10,12 +11,12 @@ module.exports = {
     module: {
         loaders: [
             {
-              test: /.jsx?$/,
+              test: /\.jsx?$/,
               exclude: /node_modules/,
               loader: 'babel-loader',
               query:
               {
-                presets:['es2015', 'react']
+                presets:['es2015', 'stage-0', 'react']
               }
             }
         ]

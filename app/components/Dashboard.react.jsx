@@ -2,8 +2,8 @@ import React from 'react';
 import Toolbar from './Toolbar.react.jsx';
 
 class Dashboard extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       greeting: 'Hello There'
     };
@@ -17,4 +17,4 @@ class Dashboard extends React.Component {
   }
 };
 
-module.exports = Dashboard;
+export default Dashboard;

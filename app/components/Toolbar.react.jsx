@@ -1,6 +1,9 @@
 import React from 'react';
 
 class Toolbar extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     console.log(this.props.greeting);
     return (
@@ -9,4 +12,4 @@ class Toolbar extends React.Component {
   }
 };
 
-module.exports = Toolbar;
+export default Toolbar;
