@@ -12,12 +12,17 @@ module.exports = {
         loaders: [
             {
               test: /\.jsx?$/,
-              exclude: /node_modules/,
+              include: path.join(__dirname, 'app'),
               loader: 'babel-loader',
               query:
               {
                 presets:['es2015', 'stage-0', 'react']
               }
+            },
+            {
+              test: /\.scss$/,
+              include: path.join(__dirname, 'app', 'styles'),
+              loader: 'style!css!sass'
             }
         ]
     },

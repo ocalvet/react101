@@ -4,6 +4,7 @@ import Dashboard from './components/Dashboard.react.jsx';
 import mui from 'material-ui'
 import ThemeManager from 'material-ui/lib/styles/theme-manager';
 import MyRawTheme from './theme/config';
+require('./styles/main.scss');
 
 var AppBar = mui.AppBar;
  
